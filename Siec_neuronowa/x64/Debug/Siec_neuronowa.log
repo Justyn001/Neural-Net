@@ -1,0 +1,42 @@
+﻿  Siec_neuronowa.cpp
+  Net.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3169,27): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "Neuron"
+  (kompilowanie pliku źródłowego „Siec_neuronowa.cpp”)
+  D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.h(9,7):
+  zobacz deklarację „Neuron”
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3169,27):
+  kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
+  	D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.h(17,16):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::vector<Net::Layer,std::allocator<Net::Layer>>” klasy klasa szablon
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(2043,23):
+  	podczas kompilowania funkcji składowej „void std::vector<Net::Layer,std::allocator<Net::Layer>>::_Tidy(void) noexcept” klasy klasa szablon
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(765,14):
+  		zobacz pierwsze odwołanie do elementu „std::vector<Net::Layer,std::allocator<Net::Layer>>::_Tidy” w „std::vector<Net::Layer,std::allocator<Net::Layer>>::~vector”
+  		D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.h(18,1):
+  		zobacz pierwsze odwołanie do elementu „std::vector<Net::Layer,std::allocator<Net::Layer>>::~vector” w „Net::~Net”
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(2053,13):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::unique_ptr<Neuron,std::default_delete<Neuron>>” klasy klasa szablon
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3205,66):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::default_delete<Neuron>” klasy klasa szablon
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3168,23):
+  	podczas kompilowania funkcji składowej „void std::default_delete<Neuron>::operator ()(_Ty *) noexcept const” klasy klasa szablon
+          with
+          [
+              _Ty=Neuron
+          ]
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3280,33):
+  		zobacz pierwsze odwołanie do elementu „std::default_delete<Neuron>::operator ()” w „std::unique_ptr<Neuron,std::default_delete<Neuron>>::~unique_ptr”
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3327,1):
+  		zobacz pierwsze odwołanie do elementu „std::unique_ptr<Neuron,std::default_delete<Neuron>>::~unique_ptr” w „std::unique_ptr<Neuron,std::default_delete<Neuron>>::~unique_ptr”
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3169,25): error C2338: static_assert failed: 'can't delete an incomplete type'
+  (kompilowanie pliku źródłowego „Siec_neuronowa.cpp”)
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(3170,9): warning C4150: usunięcie wskaźnika do niekompletnego typu "Neuron"; brak wywołania destruktora
+  (kompilowanie pliku źródłowego „Siec_neuronowa.cpp”)
+  D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.h(9,7):
+  zobacz deklarację „Neuron”
+  
+  Neuron.cpp
+  Connection.cpp
+  Generowanie kodu...
