@@ -1,1 +1,2 @@
 D:\Repozytoria\stinky_polsl\Siec_neuronowa\x64\Debug\Siec_neuronowa.exe
+D:\Repozytoria\Neural-Net\Siec_neuronowa\x64\Debug\Siec_neuronowa.exe

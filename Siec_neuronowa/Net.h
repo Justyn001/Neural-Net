@@ -3,8 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
+#include <cassert>
+#include "Neuron.h"
 
 using namespace std;
+
 
 class Neuron;
 
@@ -12,8 +16,10 @@ class Net
 {
 public:
 	Net(vector<unsigned> input);
+	void feedforward(const vector<double> &inputVal);
+	void backProp();
 private:
-	typedef vector<unique_ptr<Neuron>> Layer;
+	typedef vector<Neuron*> Layer;
 	vector<Layer> v_layers;  // v_layers[layernum][neuronnum]
 };
 #endif

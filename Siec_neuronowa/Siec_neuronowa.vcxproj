@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Siec_neuronowa.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Net.cpp" />
     <ClCompile Include="Neuron.cpp" />
     <ClCompile Include="Connection.cpp" />
