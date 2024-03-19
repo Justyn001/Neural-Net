@@ -1,2 +1,4 @@
 ﻿  Net.cpp
+D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.cpp(53,25): warning C4267: "inicjowanie": konwersja z "size_t" do "unsigned int", możliwa utrata danych
+D:\Repozytoria\Neural-Net\Siec_neuronowa\Net.cpp(62,25): warning C4267: "inicjowanie": konwersja z "size_t" do "unsigned int", możliwa utrata danych
   Siec_neuronowa.vcxproj -> D:\Repozytoria\Neural-Net\Siec_neuronowa\x64\Debug\Siec_neuronowa.exe

@@ -17,9 +17,13 @@ class Net
 public:
 	Net(vector<unsigned> input);
 	void feedforward(const vector<double> &inputVal);
-	void backProp();
+	void backProp(const vector<double> &targetVals);
 private:
 	typedef vector<Neuron*> Layer;
 	vector<Layer> v_layers;  // v_layers[layernum][neuronnum]
+	double m_error;
+	double m_recentAverageError;
+	static double m_recentAverageSmoothingFactor;
+
 };
 #endif

@@ -34,7 +34,38 @@ void Net::feedforward(const vector<double>& inputVal)
 	}
 }
 
-void Net::backProp()
+void Net::backProp(const vector<double> &targetVals)
 {
+	Layer& outputlayer = v_layers.back();
+	m_error = 0;
+	for (unsigned i = 0; i < outputlayer.size(); i++)
+	{
+		double delta = targetVals[i] - outputlayer[i]->get_output_val();
+		m_error += delta * delta;
+	}
+	m_error /= targetVals.size() - 1;
+	m_error = sqrt(m_error);
+
+
+	for (unsigned i = 0; i < outputlayer.size(); i++)
+		outputlayer[i]->calcoutputGradient(targetVals[i]);
+
+	for (unsigned layernum = v_layers.size() - 2; layernum > 0; layernum--)
+	{
+		Layer& hiddenlayer = v_layers[layernum];
+		Layer& nextlayer = v_layers[layernum + 1];
+
+		for (unsigned i = 0; i < hiddenlayer.size(); i++)
+			hiddenlayer[i]->calchiddenGradient(nextlayer);
+	}
+
+	for (unsigned layernum = v_layers.size() - 1; layernum > 0; layernum--)
+	{
+		Layer& layer = v_layers[layernum];
+		Layer& prevlayer = v_layers[layernum - 1];
+
+		for (unsigned i = 0; i < layer.size(); i++)
+			layer[i]->updateInputWeights(prevlayer);
+	}
 
 }
